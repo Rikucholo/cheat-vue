@@ -13,6 +13,9 @@ import { Number } from "@/number";
 export default {
   name: "NewCom",
   mixins: [Number],
+  created(){
+    console.log("second created");
+  }
 };
 </script>
 

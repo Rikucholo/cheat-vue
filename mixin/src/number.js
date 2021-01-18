@@ -19,6 +19,9 @@ export const Number = {
     lower(value){
       return value.toLowerCase();
     }
+  },
+  created(){
+    console.log('created a successgul');
   }
 
 }

@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VAnimateCss from 'animate.css';
+// Install Animate.css
+Vue.use(VAnimateCss);
 
 Vue.config.productionTip = false
 

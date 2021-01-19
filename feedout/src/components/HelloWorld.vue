@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition name="fade">
+    <transition name="fade" appear>
       <div v-if="show">これが消えていく</div>
     </transition>
     <transition name="fade2">
@@ -12,6 +12,9 @@
         <p>{{ item }}</p>
       </div>
     </transition-group>
+    <transition enter-active-class="animate__animated animate__bounce" appear>
+      <p>konnnitihha</p>
+    </transition>
     <button @click="show = !show">button</button>
   </div>
 </template>

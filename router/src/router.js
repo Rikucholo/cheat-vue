@@ -8,6 +8,6 @@ export default new Router({
   mode: "history",
   routes: [
     { path: "/", component: Home },
-    { path: "/users", component: User },
+    { path: "/users/:id", component: User, props: true },
   ],
 });

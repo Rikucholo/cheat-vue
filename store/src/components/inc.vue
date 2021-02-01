@@ -1,15 +1,15 @@
 <template>
   <div>
-  <button @click="inc()">＋＋</button>
-  <router-link to="/">home</router-link>
+    <button @click="incli()">＋＋</button>
+    <router-link to="/">home</router-link>
   </div>
 </template>
 <script>
 export default {
   name: "inc",
   methods: {
-    inc() {
-      this.$store.state.count++;
+    incli() {
+      this.$store.commit("ic", 2);
     },
   },
 };

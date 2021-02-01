@@ -1,16 +1,15 @@
 <template>
   <div>
-    <button @click="incli()">＋＋</button>
+    <button @click="ic(2)">＋＋</button>
     <router-link to="/">home</router-link>
   </div>
 </template>
 <script>
+import {mapMutasions} from 'vuex';
 export default {
   name: "inc",
   methods: {
-    incli() {
-      this.$store.commit("ic", 2);
-    },
+    ...mapMutasions(["ic"]),
   },
 };
 </script>

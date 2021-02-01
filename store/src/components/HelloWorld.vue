@@ -4,6 +4,8 @@
     <p>二倍</p>
     <p>{{ doubleState }}</p>
     <router-link to="/inc">inv</router-link>
+    <input type="text" v-model="message" />
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -18,6 +20,14 @@ export default {
     ...mapGetters(["doubleState"]),
     state() {
       return this.$store.state.count;
+    },
+    message: {
+      get() {
+        return this.$store.getters.message;
+      },
+      set(value) {
+        this.$store.dispatch("updateMessage", value);
+      },
     },
   },
 };

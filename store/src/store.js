@@ -15,4 +15,10 @@ export default new Vuex.Store({
       state.count += number;
     },
   },
+  actions: {
+    //incre(context, number) { {}　を使うことで使用するコンテキストだけ指定可能
+    incre({ commit }, number) {
+      commit("rc", number);
+    },
+  },
 });

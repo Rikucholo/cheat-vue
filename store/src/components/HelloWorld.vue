@@ -1,18 +1,22 @@
 <template>
   <div>
-    <p>{{ store }}</p>
+    <p>{{ state }}</p>
+    <p>二倍</p>
+    <p>{{ doubleState }}</p>
     <router-link to="/inc">inv</router-link>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
   },
   computed: {
-    store() {
+    ...mapGetters(["doubleState"]),
+    state() {
       return this.$store.state.count;
     },
   },

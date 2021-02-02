@@ -5,8 +5,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    count: 2,
-    message: "",
+    count: 3,
+    message: "intital message",
   },
   getters: {
     doubleState: (state) => state.count * 2,

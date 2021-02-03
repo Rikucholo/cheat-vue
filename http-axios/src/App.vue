@@ -23,24 +23,22 @@ export default {
   methods: {
     post() {
       axios
-        .post(
-          "https://firestore.googleapis.com/v1/projects/vue-http-c0133/databases/(default)/documents/comments",
-          {
-            fields: {
-              name: {
-                stringValue: this.name,
-              },
-              comment: {
-                stringValue: this.comment,
-              },
+        .post(`${process.env.VUE_APP_FIRESTORE_URL}`, {
+          fields: {
+            name: {
+              stringValue: this.name,
             },
-          }
-        )
+            comment: {
+              stringValue: this.comment,
+            },
+          },
+        })
         .then((res) => {
           console.log(res);
         })
         .catch((e) => {
           console.log(e);
+          console.log(process.env.VUE_APP_FIRESTORE_URL);
         });
       [this.name, this.comment] = "";
     },
